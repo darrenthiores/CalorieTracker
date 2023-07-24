@@ -4,12 +4,12 @@ This is a Calorie Tracker application, which can track user daily calories consu
 
 # Technologies and Libraries
 
-Kotlin
-Jetpack Compose
-Retrofit (Api Service)
-Room (Local Database)
-Dependency Injection (Dagger Hilt)
-Moshi
+- Kotlin
+- Jetpack Compose
+- Retrofit (Api Service)
+- Room (Local Database)
+- Dependency Injection (Dagger Hilt)
+- Moshi
 
 # Architecture
 
