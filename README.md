@@ -1,6 +1,6 @@
 # CalorieTracker
 
-This is a Calorie Tracker application, which can track user daily calories consumption based on what user consumed in a day
+This is a Calorie Tracker application, which can track user daily calories consumption based on what user consumed in a day, then based on user goals preference and current information, the app will tell user about the ideal calories consumption and will warn user when the total consumption is exceeds the ideal calories in a day.
 
 # Technologies and Libraries
 
