@@ -10,7 +10,7 @@ sealed class MealType(
 
     companion object {
         fun fromString(name: String): MealType =
-            when(name) {
+            when(name.lowercase()) {
                 "breakfast" -> Breakfast
                 "lunch" -> Lunch
                 "dinner" -> Dinner

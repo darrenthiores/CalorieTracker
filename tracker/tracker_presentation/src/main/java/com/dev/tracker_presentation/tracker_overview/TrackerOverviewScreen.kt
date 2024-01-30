@@ -4,18 +4,20 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.testTagsAsResourceId
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.dev.core.util.UiEvent
+import com.dev.core.R
 import com.dev.core_ui.LocalSpacing
 import com.dev.tracker_presentation.tracker_overview.component.*
-import com.dev.core.R
 
+@OptIn(ExperimentalComposeUiApi::class)
 @Composable
 fun TrackerOverviewScreen(
     viewModel: TrackerOverviewViewModel = hiltViewModel(),
@@ -29,6 +31,9 @@ fun TrackerOverviewScreen(
         modifier = Modifier
             .fillMaxSize()
             .padding(bottom = spacing.spaceMedium)
+            .semantics {
+                testTagsAsResourceId = true
+            }
     ) {
         item {
             NutrientHeader(

@@ -16,6 +16,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.testTagsAsResourceId
 import androidx.compose.ui.text.style.TextAlign
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.dev.core.util.UiEvent
@@ -57,6 +59,9 @@ fun SearchScreen(
         modifier = Modifier
             .fillMaxSize()
             .padding(spacing.spaceMedium)
+            .semantics {
+                testTagsAsResourceId = true
+            }
     ) {
         Text(
             modifier = Modifier,

@@ -24,6 +24,7 @@ import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.layout.LastBaseline
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
@@ -174,7 +175,8 @@ fun TrackableFoodItem(
                             .padding(spacing.spaceMedium)
                             .semantics {
                                 contentDescription = "Amount"
-                            },
+                            }
+                            .testTag("Amount"),
                         value = trackableFoodUiState.amount,
                         onValueChange = onAmountChange,
                         keyboardOptions = KeyboardOptions(
@@ -205,6 +207,8 @@ fun TrackableFoodItem(
                 }
                 
                 IconButton(
+                    modifier = Modifier
+                        .testTag("Track"),
                     onClick = onTrack,
                     enabled = trackableFoodUiState.amount.isNotBlank()
                 ) {

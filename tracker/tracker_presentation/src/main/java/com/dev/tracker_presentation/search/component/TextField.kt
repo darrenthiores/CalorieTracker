@@ -89,7 +89,8 @@ fun SearchTextField(
 
         IconButton(
             modifier = Modifier
-                .align(Alignment.CenterEnd),
+                .align(Alignment.CenterEnd)
+                .testTag("Search..."),
             onClick = onSearch
         ) {
             Icon(

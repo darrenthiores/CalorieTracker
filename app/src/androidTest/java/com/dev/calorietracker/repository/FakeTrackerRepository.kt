@@ -7,14 +7,26 @@ import com.dev.tracker_domain.repository.TrackerRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableSharedFlow
 import java.time.LocalDate
+import javax.inject.Inject
+import javax.inject.Singleton
 import kotlin.random.Random
 
-class FakeTrackerRepository: TrackerRepository {
+@Singleton
+class FakeTrackerRepository @Inject constructor() : TrackerRepository {
 
     var shouldReturnError = false
 
     private val trackedFood = mutableListOf<TrackedFood>()
-    var searchResults = listOf<TrackableFood>()
+    var searchResults = listOf(
+        TrackableFood(
+            name = "banana",
+            imageUrl = null,
+            caloriesPer100g = 150,
+            carbsPer100g = 50,
+            proteinPer100g = 5,
+            fatPer100g = 1
+        )
+    )
 
     private val getFoodsForDateFlow = MutableSharedFlow<List<TrackedFood>>(
         replay = 1

@@ -30,4 +30,7 @@ object Testing {
 
     private const val testRunnerVersion = "1.4.0"
     const val testRunner = "androidx.test:runner:$testRunnerVersion"
+
+    private const val uiAutomatorVersion = "2.3.0-alpha02"
+    const val uiAutomator = "androidx.test.uiautomator:uiautomator:$uiAutomatorVersion"
 }

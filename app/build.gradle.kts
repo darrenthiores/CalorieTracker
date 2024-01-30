@@ -112,4 +112,6 @@ dependencies {
     androidTestImplementation(Testing.hiltTesting)
     kaptAndroidTest(DaggerHilt.hiltCompiler)
     androidTestImplementation(Testing.testRunner)
+
+    androidTestImplementation(Testing.uiAutomator)
 }
